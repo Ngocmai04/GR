@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Sharing Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow p-4 flex justify-between items-center">
+        <div class="text-xl font-bold">PhotoShare</div>
+        <div class="flex gap-4">
+            <button class="text-gray-700 hover:text-black">Home</button>
+            <button class="text-gray-700 hover:text-black">Albums</button>
+            <button class="text-gray-700 hover:text-black">Upload Photo</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">Login / Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="bg-white shadow p-4 flex justify-center">
+        <input 
+            type="text" 
+            placeholder="Search photos by title, tag, or location..." 
+            class="w-1/2 p-2 border border-gray-300 rounded"
+        />
+        <button class="ml-2 bg-blue-500 text-white px-4 py-2 rounded">Search</button>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Photo Card -->
+        <div class="shadow hover:shadow-lg transition">
+            <img src="https://via.placeholder.com/150" alt="Sunset in the mountains" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-lg font-semibold">Sunset in the mountains</h3>
+                <p class="text-sm text-gray-500">A beautiful sunset view</p>
+                <p class="text-sm text-gray-500">Location: Alps, Switzerland</p>
+                <p class="text-sm text-gray-500">Posted by: John Doe</p>
+                <p class="text-sm text-gray-500">Posted on: 2025-04-01</p>
+                <div class="flex justify-between mt-2">
+                    <span class="text-sm text-gray-500">Views: 120</span>
+                    <span class="text-sm text-gray-500">Comments: 15</span>
+                </div>
+                <button class="mt-2 text-blue-500 hover:underline">View Details</button>
+            </div>
+        </div>
+        <!-- Additional photo cards can be replicated here -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="p-4 flex justify-center">
+        <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Previous</button>
+        <span class="px-4 py-2">Page 1 of 5</span>
+        <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Next</button>
+    </div>
+</body>
+</html>
